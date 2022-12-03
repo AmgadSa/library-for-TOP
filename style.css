@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Noto Sans JP","Ubuntu",sans-serif;
 }
 :root{
     --main-color:hsl(0,45%,84%);
@@ -51,7 +52,7 @@ h1{
     transition: all ease-in-out 100ms;
 }
 .book-addition{
-    width: max(340px,35vw);
+    min-width: max(340px,35vw);
     padding: 10%;
     display: grid;
     gap: 1em;
