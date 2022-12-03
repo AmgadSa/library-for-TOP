@@ -27,7 +27,7 @@ const getParagraph = (x) => [...Array(x)].map(item => getWord()).join(' ');
 const library = [];
 const form = $('.form.container');
 
-function Book(title,author,pages = 0,status = true){
+function Book(title,author,pages = 0,status = false){
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -69,8 +69,7 @@ function displayBooks(){
 }
 $('.book-addition').addEventListener('submit',(e)=>{
     let store = e.target;
-    let newBook = new Book(store.btitle.value,store.author.value,store.pages.value,store.status.value);
-    console.log(e);
+    let newBook = new Book(store.btitle.value,store.author.value,store.pages.value,(store.status.value === 'true')?true:false);
     addBookToLibrary(newBook);
     hideForm();
     displayBooks();
@@ -88,10 +87,9 @@ const hideForm = ()=> {
 };
 
 $('body').addEventListener('keydown',(e)=>{(e.key === 'Escape')?hideForm():false});
-const escapeEvent = new Event('keydown');
-escapeEvent.key = 'Escape';
 
 $('div.form.container').addEventListener('click',(e)=>{e.currentTarget === e.target ? hideForm(): false});
+
 const createBooks = x => {for(let i = 0;i<x;i++){
     addBookToLibrary(new Book(getName(random(3)+1),getName(2),random(555)+45,((random(1)===0)?true:false)))
 }};
