@@ -18,7 +18,9 @@ table, th, td {
 tr:nth-child(2n){
     background-color: #00000020;
 }
-
+tr:hover:not(:first-child){
+    background-color: hsl(0,45%,50%,.5);
+}
 .border{
     min-height: 100vh;
     padding: 20px 0;
