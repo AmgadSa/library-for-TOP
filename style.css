@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --main-color:hsl(0,45%,84%);
+    --main-background:hsl(0,45%,70%);
+    font-size: 16px;
+}
+body{
+    background-color: var(--main-background);
+}
+table, th, td {
+    padding: 5px;
+}
+tr:nth-child(2n){
+    background-color: #00000020;
+}
+
+.border{
+    min-height: 100vh;
+    padding: 20px 0;
+}
+.container{
+    background-color: var(--main-color);
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px 3px #00000055;
+}
+.container,
+.border{
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 0;
+}
+h1{
+    margin-bottom: 20px;
+}
+.form.container{
+    height: 100vh;
+    width: 100vw;
+    display:none;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #00000080;
+    transition: all ease-in-out 100ms;
+}
+.book-addition{
+    width: max(340px,35vw);
+    padding: 10%;
+    display: grid;
+    gap: 1em;
+    background-color: hsl(208, 100%, 97%);
+    border-radius: 10px;
+}
+.subform{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+input,label,select{
+    font-size: 1.2rem;
+}
+button,td,th{
+    padding: 5px;
+    font-size: 1.2rem;
+}
+.add-book{
+    border-radius: 10px 10px 0 0;
+    border: #00000055 solid 1px;
+    border-bottom: none;
+}
+.add-book:hover{
+    background-color: hsl(0deg 0% 84%);
+}
+.add-book img:hover{
+    filter: none;
+}
+form button{
+    margin-top: 15px;
+    justify-self: center;
+    max-width: fit-content; 
+}
+img{
+    width: 2.5rem;
+}
+img:hover{
+    filter: invert();
+}

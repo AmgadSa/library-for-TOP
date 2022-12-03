@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="border">
+        <h1>Small Library</h1>
+        <div class="container">
+            <table class="books"></table>
+            <div class="form container">
+                <form action="POST" class="book-addition" >
+                    <div class="subform">
+                        <label for="title">Book title:</label>
+                        <input type="text" name="btitle" id="btitle" required>
+                    </div>
+                    <div class="subform">
+                        <label for="author">Book Author:</label>
+                        <input type="text" name="author" id="author" required>
+                    </div>
+                    <div class="subform">
+                        <label for="pages">Page Count:</label>
+                        <input type="number" name="pages" id="pages" required>
+                    </div>
+                    <div class="subform">
+                        <label for="status">Book Status:</label>
+                        <select name="status" id="status"  required>
+                            <option value="true">read</option>
+                            <option value="false">unread</option>
+                        </select>
+                    </div>
+                    <button>Add Book</button>
+                </form>
+            </div>
+            <button class="add-book" onclick="showForm()"><img src="images/book-add.svg" alt="d"></button>
+        </div>
+    </div>
+</body>
+</html>
